@@ -28,20 +28,37 @@ set default-profile=vpn-profile certificate=server-certificate require-client-ce
 https://www.medo64.com/2016/12/simple-openvpn-server-on-mikrotik/
 
 ##Config files
+
 client
+
 dev tun
+
 proto tcp
+
 remote 10.20.32.102 1194
+
 resolv-retry infinite
+
 nobind
+
 persist-key
+
 persist-tun
+
 ca ca.crt
+
 cert client.crt
+
 key client.key
+
 remote-cert-tls server
+
 cipher AES-128-CBC
+
 auth SHA1
+
 auth-user-pass
+
 redirect-gateway def1
+
 verb 3
